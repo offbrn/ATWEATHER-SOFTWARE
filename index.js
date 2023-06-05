@@ -47,7 +47,7 @@ function search () {
         
 
 
-    const apiKey = "c5fd520e89185b8ef2538752b355f54d";
+    const apiKey = "private";
     const apiCall = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${apiKey}`;
 
     fetch(apiCall)
