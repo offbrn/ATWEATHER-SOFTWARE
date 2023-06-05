@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff6e;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+}
+
+.card {
+    position: relative;
+    width: 480px;
+    height: 128px;
+    padding: 40px;
+    margin: 20px;
+    border-radius: 30px;
+    background: linear-gradient(220deg, #14244c, #14244c, #14244c);
+    background: linear-gradient(220deg, #14244c, #14244c, #14244c);
+    /* background: linear-gradient(220deg, #fbbb88, #fe67bc, #bf6bd5); */
+    box-shadow: 0 0 20px 3px #bfa8bc;
+    transition: all .5s;
+}
+
+.search-bar {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    color: #00000082;
+}
+
+.search-bar input {
+    /* padding: 10px 50px; */
+    padding: 10px 50px 8px 56px;
+    width: 90%;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    color: #00000082;
+    text-transform: uppercase;
+    /* color: red;
+    opacity: 0.5; */
+}
+
+input::placeholder {
+    /* font-weight: bold; */
+    /* font-size: 18px; */
+    opacity: 0.5;
+    /* color: red; */
+}
+
+input:focus-visible {
+    outline: none;
+    box-shadow: 0 0 20px 2px #bfa8bc;
+}
+
+.search-bar .material-symbols-outlined {
+    font-size: 28px;
+    color: #00000082;
+}
+
+.search-bar .location {
+    position: absolute;
+    left: 18px;
+    top: 10px;
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48;
+}
+
+
+.search-bar .search {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.search-bar .search:hover {
+    background-image: linear-gradient(220deg, #77c1ec, #a073f5);
+    color: #fff;
+    box-shadow: 0 0 20px 2px #bfa8bc;
+}
+
+/* TEMP BOX */
+.temp-box {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 40px;
+    overflow: hidden;
+    transition: all .2s;
+}
+
+.weather-icon img {
+    width: 180px;
+}
+
+.current-temp {
+    display: flex;
+    margin-top: 20px;
+    font-family: 'Mochiy Pop P One', sans-serif;
+}
+
+.current-temp .num {
+    font-size: 78px;
+    /* font-weight: 500; */
+    line-height: 105px;
+}
+
+.current-temp .derg {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.description {
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+
+.location-response {
+    display: flex;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    gap: 2px;
+}
+
+.weather-details {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 60px;
+    background-color: #e9e9e91f;
+    border-radius: 20px;
+    padding: 24px 10px;
+}
+
+.weather-details .item {
+    display: flex;
+    gap: 10px;
+}
+
+.weather-details .item .icon {
+    margin: auto;
+    text-align: center;
+    font-size: 45px;
+}
+
+.weather-details .item .value {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+/* ERROR BOX */
+.error-box {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 40px;
+    overflow: hidden;
+    transition: all .2s ease-out;
+}
+
+.error-icon img {
+    width: 180px;
+}
+
+.error-message {
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+
+/* ANIMATION */
+.slide-in {
+    animation: slideIn .3s ease-in-out;
+}
+
+@keyframes slideIn {
+    0% {transform: translateX(300px); }
+    100% { transform: translateX(0px); }
+}
+
+.grow-in {
+    animation: growIn .3s ease-in;
+}
+
+@keyframes growIn {
+    0% { transform: scale(0); }
+    100% { transform: scale(1); }
+}
